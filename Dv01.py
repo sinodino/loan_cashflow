@@ -81,7 +81,6 @@ def loan_cashflow(df):
         print("Calculating loan cashflow")
     # Store the rows that have missing info for later use
     miss_df = df[numeric_cols].apply(check_missing_non_numeric, axis=1)
-    print(miss_df)
     
     # remove the rows from original data that has misisng info
     df[numeric_cols] = df[numeric_cols].apply(pd.to_numeric, errors='coerce')
